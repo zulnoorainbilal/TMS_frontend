@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMS Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body onload="loadLayout()">
+
+    <!-- Sidebar -->
+    <div id="sidebar"></div>
+
+    <!-- Main Layout -->
+    <div class="main">
+
+        <!-- Navbar -->
+        <div id="navbar"></div>
+
+        <!-- Page Content -->
+        <div class="content">
+            <div class="dashboard">
+
+                <h2>Fleet Overview</h2>
+                <p>Real-time status of your transport operations today.</p>
+
+                <!-- Cards -->
+                <div class="cards">
+                    <div class="card">
+                        <p>Total Builty Today</p>
+                        <h3>42</h3>
+                    </div>
+
+                    <div class="card">
+                        <p>Total Trips Today</p>
+                        <h3>18</h3>
+                    </div>
+
+                    <div class="card">
+                        <p>Total Income Today</p>
+                        <h3>₹1.24L</h3>
+                    </div>
+
+                    <div class="card">
+                        <p>Pending Payments</p>
+                        <h3>₹3.12L</h3>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="table-section">
+                    <h3>Recent Builty Records</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Customer</th>
+                                <th>Route</th>
+                                <th>Freight</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>BL-8802</td>
+                                <td>Global Textiles Inc.</td>
+                                <td>Surat → Delhi</td>
+                                <td>₹45,000</td>
+                                <td>Partial</td>
+                            </tr>
+
+                            <tr>
+                                <td>BL-8801</td>
+                                <td>Reliance Retail</td>
+                                <td>Mumbai → Pune</td>
+                                <td>₹12,500</td>
+                                <td>Paid</td>
+                            </tr>
+
+                            <tr>
+                                <td>BL-8799</td>
+                                <td>Amazon Logistics</td>
+                                <td>Bangalore → Chennai</td>
+                                <td>₹32,000</td>
+                                <td style="color:red;">Unpaid</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Right Section -->
+                <div class="right-panel">
+                    <h3>Quick Management</h3>
+
+                    <button>Create New Builty</button>
+                    <button>Register New Customer</button>
+                    <button>Assign New Trip</button>
+                    <button>Record Payment</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+    </div>
+
+    <script src="../js/include.js"></script>
+</body>
+
+</html>
