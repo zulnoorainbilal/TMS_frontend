@@ -103,12 +103,14 @@ body {
 
 /* Main wrapper */
 .main {
-  margin-left: 240px; /* push away from sidebar */
+  margin-left: 240px;
+  /* push away from sidebar */
 }
 
 /* Content area */
 .content {
-  margin-top: 60px; /* push below navbar */
+  margin-top: 60px;
+  /* push below navbar */
   margin-bottom: 60px;
   padding: 20px;
 }
@@ -150,7 +152,8 @@ table {
   margin-top: 10px;
 }
 
-table th, table td {
+table th,
+table td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #eee;
@@ -174,4 +177,96 @@ table th, table td {
   color: white;
   border-radius: 6px;
   cursor: pointer;
+}
+
+
+/* changes builty page Page Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.primary-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.filter-bar input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tabs span {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #007bff;
+  color: white;
+}
+
+/* Table improvements */
+.badge {
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #eee;
+  font-size: 12px;
+}
+
+.badge.paid {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge.unpaid {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.badge.partial {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.danger {
+  color: red;
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  
+}
+
+.page-info {
+  font-size: 14px;
+  color: #555;
 }

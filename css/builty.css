@@ -1,0 +1,594 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fdfdfd;
+}
+
+/* Navbar CSS */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.navbar-sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+
+/* Side Bar CSS */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  background: #f5f5f5;
+  border-right: 1px solid #eee;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  color: #007bff;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 20px;
+}
+
+.sidebar-footer a {
+  color: red;
+  text-decoration: none;
+}
+
+/* Footer CSS */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 240px;
+  right: 0;
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Dashboard CSS */
+
+/* Main wrapper */
+.main {
+  margin-left: 240px;
+  /* push away from sidebar */
+}
+
+/* Content area */
+.content {
+  margin-top: 60px;
+  /* push below navbar */
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+/* Dashboard layout */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+/* Table */
+.table-section {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+/* Right panel */
+.right-panel {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.right-panel button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+/*changes start from their Table Header Layout */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.table-header input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #007bff;
+  color: white;
+}
+
+.btn.light {
+  background: #eee;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 5px;
+}
+
+.tabs button {
+  padding: 6px 10px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #007bff;
+  color: white;
+}
+
+/* Colors */
+.text-red {
+  color: red;
+}
+
+.text-green {
+  color: green;
+}
+
+/* Badge System */
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.badge.success {
+  background: #d4edda;
+}
+
+.badge.danger {
+  background: #f8d7da;
+}
+
+.badge.warning {
+  background: #fff3cd;
+}
+
+.badge.blue {
+  background: #cce5ff;
+}
+
+.badge.gray {
+  background: #e2e3e5;
+}
+
+/* Link Style */
+.link {
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Filters container */
+.filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.page-info {
+  font-size: 14px;
+  color: #555;
+}
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body onload="loadLayout()">
+
+
+    <div id="navbar"></div>
+    <div id="sidebar"></div>
+
+    <div class="main">
+        <div class="content">
+
+            <!-- Top Stats -->
+            <div class="cards">
+                <div class="card">
+                    <p>Total Builties</p>
+                    <h3>1,284</h3>
+                </div>
+
+                <div class="card">
+                    <p>Pending Dispatch</p>
+                    <h3>42</h3>
+                </div>
+
+                <div class="card">
+                    <p>In Transit</p>
+                    <h3>156</h3>
+                </div>
+
+                <div class="card">
+                    <p>Completed Today</p>
+                    <h3>18</h3>
+                </div>
+            </div>
+
+            <!-- Search + Filter -->
+            <div class="table-section">
+
+                <div class="table-header">
+                    <input type="text" placeholder="Search by Builty No, Customer, or City...">
+
+                    <div class="filters">
+                        <button class="btn light">Filter</button>
+
+                        <div class="tabs">
+                            <button class="active">All</button>
+                            <button>Pending Dispatch</button>
+                            <button>In Transit</button>
+                            <button>Completed</button>
+                        </div>
+                    </div>
+
+                    <button class="btn primary">+ Create Builty</button>
+                </div>
+
+                <!-- Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Builty No</th>
+                            <th>Date</th>
+                            <th>Customer Name</th>
+                            <th>Route</th>
+                            <th>Freight</th>
+                            <th>Advance</th>
+                            <th>Remaining</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="link">LR-88291</td>
+                            <td>24 May 2024</td>
+                            <td>Global Exports Ltd.</td>
+                            <td>Mumbai → Delhi</td>
+                            <td>₹45,000</td>
+                            <td>₹15,000</td>
+                            <td class="text-red">₹30,000</td>
+                            <td><span class="badge warning">Partial</span></td>
+                            <td><span class="badge gray">Not Assigned</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="link">LR-88292</td>
+                            <td>24 May 2024</td>
+                            <td>Adani Logistics</td>
+                            <td>Ahmedabad → Chennai</td>
+                            <td>₹62,000</td>
+                            <td>₹62,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="link">LR-88293</td>
+                            <td>23 May 2024</td>
+                            <td>Reliance Retail</td>
+                            <td>Pune → Bangalore</td>
+                            <td>₹28,000</td>
+                            <td>₹0</td>
+                            <td class="text-red">₹28,000</td>
+                            <td><span class="badge danger">Unpaid</span></td>
+                            <td><span class="badge gray">Not Assigned</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="link">LR-88294</td>
+                            <td>23 May 2024</td>
+                            <td>Tata Motors</td>
+                            <td>Jamshedpur → Kolkata</td>
+                            <td>₹18,000</td>
+                            <td>₹10,000</td>
+                            <td class="text-red">₹8,000</td>
+                            <td><span class="badge warning">Partial</span></td>
+                            <td><span class="badge success">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td class="link">LR-88295</td>
+                            <td>22 May 2024</td>
+                            <td>Samsung India</td>
+                            <td>Noida → Hyderabad</td>
+                            <td>₹55,000</td>
+                            <td>₹55,000</td>
+                            <td class="text-green">₹0</td>
+                            <td><span class="badge success">Paid</span></td>
+                            <td><span class="badge blue">In Transit</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button class="btn light">Previous</button>
+                    <span class="page-info">Page 1 of 10</span>
+                    <button class="btn primary">Next</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="../js/include.js"></script>
+</body>
+
+</html>
