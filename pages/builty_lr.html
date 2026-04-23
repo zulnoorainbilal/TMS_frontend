@@ -7,302 +7,293 @@
   <title>Builty Management</title>
 
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/builty.css">
 </head>
 
 <body onload="loadLayout()">
 
-  <!-- Sidebar -->
   <div id="sidebar"></div>
 
   <div class="main">
 
-    <!-- Navbar -->
     <div id="navbar"></div>
 
-    <!-- Content -->
     <div class="content">
 
-      <div class="builty-page">
+      <div class="builty-layout">
 
-        <!-- Header -->
-        <div class="page-header">
-          <h2>Builty Management</h2>
-          <button class="primary-btn">+ Create Builty</button>
+        <!-- LEFT -->
+        <div class="builty-left">
+
+          <div class="page-header">
+            <h2>Builty Management</h2>
+            <button class="primary-btn"><a href="../pages/builtyform.html">+ Create Builty</a></button>
+          </div>
+
+          <div class="cards">
+            <div class="card"><p>Total Builty</p><h3>1,284</h3></div>
+            <div class="card"><p>Pending Dispatch</p><h3>42</h3></div>
+            <div class="card"><p>In Transit</p><h3>156</h3></div>
+            <div class="card"><p>Completed Today</p><h3>18</h3></div>
+          </div>
+
+          <div class="filter-bar">
+            <input type="text" placeholder="Search...">
+            <button class="filter-btn">Filter</button>
+          </div>
+
+          <!-- TABLE -->
+          <div class="table-section">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Builty No</th>
+                    <th>Date</th>
+                    <th>Customer</th>
+                    <th>Route</th>
+                    <th>Freight</th>
+                    <th>Advance</th>
+                    <th>Remaining</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88291">LR-88291</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Global Exports</td>
+                    <td>Mumbai → Delhi</td>
+                    <td>₹45,000</td>
+                    <td>₹15,000</td>
+                    <td class="danger">₹30,000</td>
+                    <td><span class="badge partial">Partial</span></td>
+                    <td><span class="badge neutral">Not Assigned</span></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="link" data-id="LR-88292">LR-88292</span>
+                    </td>
+                    <td>24 May</td>
+                    <td>Adani Logistics</td>
+                    <td>Ahmedabad → Chennai</td>
+                    <td>₹62,000</td>
+                    <td>₹62,000</td>
+                    <td>₹0</td>
+                    <td><span class="badge paid">Paid</span></td>
+                    <td><span class="badge transit">In Transit</span></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Stats Cards -->
-        <div class="cards">
-          <div class="card">
-            <p>Total Builty</p>
-            <h3>1,284</h3>
-          </div>
+        <!-- RIGHT PANEL -->
+        <div class="builty-right hidden" id="builtyPanel">
 
-          <div class="card">
-            <p>Pending Dispatch</p>
-            <h3>42</h3>
-          </div>
+          <button class="close-btn" onclick="closeBuilty()">✖</button>
 
-          <div class="card">
-            <p>In Transit</p>
-            <h3>156</h3>
-          </div>
+          <h3 id="builtyTitle"></h3>
 
-          <div class="card">
-            <p>Completed Today</p>
-            <h3>18</h3>
-          </div>
-        </div>
+          <p><strong>Date:</strong> <span id="bDate"></span></p>
 
-        <!-- Filter Bar -->
-        <div class="filter-bar">
-          <input type="text" placeholder="Search by Builty No, Customer, or City...">
-          <button>Filter</button>
+          <hr>
 
-          <div class="tabs">
-            <span class="active">All</span>
-            <span>Pending Dispatch</span>
-            <span>In Transit</span>
-            <span>Completed</span>
-          </div>
-        </div>
+          <h4>Customer</h4>
+          <p id="bCustomer"></p>
 
-        <!-- Table -->
-        <div class="table-section">
-          <table>
-            <thead>
-              <tr>
-                <th>Builty No</th>
-                <th>Date</th>
-                <th>Customer</th>
-                <th>Route</th>
-                <th>Freight</th>
-                <th>Advance</th>
-                <th>Remaining</th>
-                <th>Payment</th>
-                <th>Status</th>
-              </tr>
-            </thead>
+          <h4>Route</h4>
+          <p id="bRoute"></p>
 
-            <tbody>
-              <tr>
-                <td>LR-88291</td>
-                <td>24 May 2024</td>
-                <td>Global Exports</td>
-                <td>Mumbai → Delhi</td>
-                <td>₹45,000</td>
-                <td>₹15,000</td>
-                <td class="danger">₹30,000</td>
-                <td><span class="badge partial">Partial</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
+          <hr>
 
-              <tr>
-                <td>LR-88292</td>
-                <td>24 May 2024</td>
-                <td>Adani Logistics</td>
-                <td>Ahmedabad → Chennai</td>
-                <td>₹62,000</td>
-                <td>₹62,000</td>
-                <td>₹0</td>
-                <td><span class="badge paid">Paid</span></td>
-                <td><span class="badge">In Transit</span></td>
-              </tr>
+          <h4>Financial</h4>
+          <p>Freight: <span id="bFreight"></span></p>
+          <p>Advance: <span id="bAdvance"></span></p>
+          <p>Remaining: <span id="bRemaining"></span></p>
 
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-              <tr>
-                <td>LR-88293</td>
-                <td>23 May 2024</td>
-                <td>Reliance Retail</td>
-                <td>Pune → Bangalore</td>
-                <td>₹28,000</td>
-                <td>₹0</td>
-                <td class="danger">₹28,000</td>
-                <td><span class="badge unpaid">Unpaid</span></td>
-                <td><span class="badge">Not Assigned</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="pagination">
-                    <button class="btn light">Previous</button>
-                    <span class="page-info">Page 1 of 10</span>
-                    <button class="btn primary">Next</button>
-                </div>
+          <hr>
+
+          <h4>Status</h4>
+          <p id="bStatus"></p>
+
         </div>
 
       </div>
 
     </div>
 
-    <!-- Footer -->
     <div id="footer"></div>
 
   </div>
 
   <script src="../js/include.js"></script>
+  <script src="../js/builty.js"></script>
 
 </body>
 </html>

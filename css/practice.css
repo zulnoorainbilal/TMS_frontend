@@ -1,0 +1,272 @@
+Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fdfdfd;
+}
+
+/* Navbar CSS   */ 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.navbar-sub {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+
+/* Side Bar CSS */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  background: #f5f5f5;
+  border-right: 1px solid #eee;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  color: #007bff;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 20px;
+}
+
+.sidebar-footer a {
+  color: red;
+  text-decoration: none;
+}
+
+/* Footer CSS */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 240px;
+  right: 0;
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Dashboard CSS */
+
+/* Main wrapper */
+.main {
+  margin-left: 240px;
+  /* push away from sidebar */
+}
+
+/* Content area */
+.content {
+  margin-top: 60px;
+  /* push below navbar */
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+/* Dashboard layout */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 200px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+/* Table */
+.table-section {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+/* Right panel */
+.right-panel {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.right-panel button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+/* changes builty page Page Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.primary-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.filter-bar input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tabs span {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #007bff;
+  color: white;
+}
+
+/* Table improvements */
+.badge {
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #eee;
+  font-size: 12px;
+}
+
+.badge.paid {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge.unpaid {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.badge.partial {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.danger {
+  color: red;
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  
+}
+
+.page-info {
+  font-size: 14px;
+  color: #555;
+}

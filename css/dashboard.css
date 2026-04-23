@@ -1,0 +1,90 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.dashboard-layout.active {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+/* LEFT */
+.dashboard-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* RIGHT */
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* TABLE */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-all {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.table-wrapper {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* BADGES */
+.badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.paid { background: #d4edda; color: #155724; }
+.unpaid { background: #f8d7da; color: #721c24; }
+.partial { background: #fff3cd; color: #856404; }
+
+/* RIGHT CARDS */
+.action-card button {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+}
+
+/* FLEET */
+.fleet-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+/* DETAIL PANEL */
+.dashboard-detail {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 80px;
+}
+
+.hidden {
+  display: none;
+}

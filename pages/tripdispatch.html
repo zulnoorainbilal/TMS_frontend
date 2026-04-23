@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trips & Dispatch</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/tripdispatch.css">
+</head>
+
+<body onload="loadLayout()">
+
+  <div id="sidebar"></div>
+
+  <div class="main">
+    <div id="navbar"></div>
+
+    <div class="content">
+
+      <div class="trips-layout">
+
+        <!-- LEFT -->
+        <div class="trips-left">
+
+          <div class="page-header">
+            <h2>Trips & Dispatch</h2>
+            <button class="primary-btn">+ Add New Trip</button>
+          </div>
+
+          <div class="filter-bar">
+            <input type="text" placeholder="Search by Builty, Vehicle, or Driver...">
+            <button>Status: All</button>
+          </div>
+
+          <div class="table-section">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Trip ID</th>
+                    <th>Details</th>
+                    <th>Route</th>
+                    <th>Vehicle</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr onclick="selectTrip('TRP-001')">
+                    <td class="link">TRP-001</td>
+                    <td>B-77210<br><small>Global Motors</small></td>
+                    <td>Karachi → Lahore</td>
+                    <td>ABC-123</td>
+                    <td><span class="badge in-transit">In Transit</span></td>
+                  </tr>
+
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                  <tr onclick="selectTrip('TRP-002')">
+                    <td class="link">TRP-002</td>
+                    <td>B-77211<br><small>Nexus Logistics</small></td>
+                    <td>Islamabad → Multan</td>
+                    <td>XYZ-456</td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="trips-right hidden" id="tripPanel">
+
+          <button class="close-btn" onclick="closePanel()">✖</button>
+
+          <h3 id="tripTitle"></h3>
+
+          <p><strong>Status:</strong> <span id="status"></span></p>
+
+          <hr>
+
+          <h4>Driver</h4>
+          <p id="driver"></p>
+
+          <h4>Vehicle</h4>
+          <p id="vehicle"></p>
+
+          <h4>Route</h4>
+          <p id="route"></p>
+
+          <hr>
+
+          <h4>Financial</h4>
+          <p>Freight: <span id="freight"></span></p>
+          <p>Expenses: <span id="expenses"></span></p>
+          <p><strong>Profit: <span id="profit"></span></strong></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="../js/include.js"></script>
+  <script src="../js/tripdispatch.js"></script>
+
+</body>
+</html>
