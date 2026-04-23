@@ -13,6 +13,7 @@ total.addEventListener("input", calculate);
 advance.addEventListener("input", calculate);
 
 
+
 // PAYMENT TOGGLE
 document.querySelectorAll(".payment-toggle button").forEach(btn => {
   btn.addEventListener("click", function () {
@@ -20,3 +21,5 @@ document.querySelectorAll(".payment-toggle button").forEach(btn => {
     this.classList.add("active");
   });
 });
+// Select the first button and click it to trigger the logic
+document.querySelector(".payment-toggle button")?.click();

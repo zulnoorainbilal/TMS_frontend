@@ -59,12 +59,45 @@ body {
 .sidebar ul li {
   padding: 10px 0;
   cursor: pointer;
+  margin: 10px 0;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.sidebar ul li:hover{
+  background-color: #6dc5ff;
+}
+
+.sidebar ul li a{
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.side-bar-item.active {
+    background-color: #007bff; /* Change to your preferred color */
+}
+
+.side-bar-item.active a {
+    color: white !important;
+}
+
+.side-bar-item {
+  transition: all 0.2s ease;
 }
 
 .sidebar-footer {
-  position: absolute;
+  position: fixed;
+  left: 20px;
   bottom: 20px;
 }
+
+.logout-img {
+  height: 35px;
+  width: 35px;
+}
+
 
 /* Footer */
 .footer {
