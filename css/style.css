@@ -198,4 +198,5 @@ table td {
   padding: 10px 15px;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
 }

@@ -17,11 +17,24 @@ const paymentsData = {
   }
 };
 
+/* FULL ROW CLICKABLE */
+document.addEventListener("click", function(e){
+  const row = e.target.closest("tr");
+
+  if (row) {
+    const link = row.querySelector(".link");
+    if (link) {
+      const id = link.innerText.trim();
+      selectPayment(id);
+    }
+  }
+});
+
 function selectPayment(id) {
   const p = paymentsData[id];
+  if (!p) return;
 
   document.getElementById("paymentPanel").classList.remove("hidden");
-  document.querySelector(".payments-layout").classList.add("active");
 
   document.getElementById("payTitle").innerText = id + " Details";
   document.getElementById("payDate").innerText = p.date;
@@ -34,5 +47,4 @@ function selectPayment(id) {
 
 function closePayment() {
   document.getElementById("paymentPanel").classList.add("hidden");
-  document.querySelector(".payments-layout").classList.remove("active");
 }

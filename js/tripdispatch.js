@@ -19,9 +19,9 @@ const trips = {
 
 function selectTrip(id) {
   const trip = trips[id];
+  if(!trip) return;
 
   document.getElementById("tripPanel").classList.remove("hidden");
-  document.querySelector(".trips-layout").classList.add("active");
 
   document.getElementById("tripTitle").innerText = id + " Details";
   document.getElementById("status").innerText = trip.status;
@@ -35,5 +35,4 @@ function selectTrip(id) {
 
 function closePanel() {
   document.getElementById("tripPanel").classList.add("hidden");
-  document.querySelector(".trips-layout").classList.remove("active");
 }

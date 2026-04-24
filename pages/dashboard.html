@@ -7,7 +7,6 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/dashboard.css">
-  
 </head>
 
 <body onload="loadLayout()">
@@ -25,101 +24,160 @@
         <!-- LEFT -->
         <div class="dashboard-left">
 
+          <!-- HEADER -->
           <div class="page-header">
             <h2>Dashboard</h2>
-            <button class="primary-btn"><a href="../pages/builtyform.html">+ Add New Builty</a></button>
+            <button class="primary-btn" onclick="location.href='../pages/builtyform.html'">
+              + Add New Builty
+            </button>
           </div>
 
           <!-- CARDS -->
-          <div class="cards">
+          <div class="cards full-width">
             <div class="card"><p>Total Builty</p><h3>42</h3></div>
             <div class="card"><p>Total Trips</p><h3>18</h3></div>
             <div class="card"><p>Income</p><h3>₹1.24L</h3></div>
             <div class="card"><p>Pending</p><h3>₹3.12L</h3></div>
           </div>
 
-          <!-- TABLE -->
-          <div class="table-section">
-            <div class="table-header">
-              <h3>Recent Builty Records</h3>
-              <span class="view-all">View All</span>
+          <!-- TABLE + RIGHT SIDE -->
+          <div class="dashboard-bottom">
+
+            <!-- TABLE -->
+            <div class="table-section large-table">
+              <div class="table-header">
+                <h3>Recent Builty Records</h3>
+                <span class="view-all">View All</span>
+              </div>
+
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Customer</th>
+                      <th>Route</th>
+                      <th>Freight</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <tr onclick="openDetail('BL-8802')">
+                      <td class="link">BL-8802</td>
+                      <td>Global Textiles</td>
+                      <td>Surat → Delhi</td>
+                      <td>₹45,000</td>
+                      <td><span class="badge partial">Partial</span></td>
+                    </tr>
+
+                    <tr onclick="openDetail('BL-8801')">
+                      <td class="link">BL-8801</td>
+                      <td>Reliance Retail</td>
+                      <td>Mumbai → Pune</td>
+                      <td>₹12,500</td>
+                      <td><span class="badge paid">Paid</span></td>
+                    </tr>
+
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+                    <tr onclick="openDetail('BL-8799')">
+                      <td class="link">BL-8799</td>
+                      <td>Amazon Logistics</td>
+                      <td>Bangalore → Chennai</td>
+                      <td>₹32,000</td>
+                      <td><span class="badge unpaid">Unpaid</span></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
             </div>
 
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Customer</th>
-                    <th>Route</th>
-                    <th>Freight</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
+            <!-- QUICK MANAGEMENT -->
+            <div class="card action-card">
+              <h3>Quick Management</h3>
 
-                <tbody>
-
-                  <tr>
-                    <td><span class="link" data-id="BL-8802">BL-8802</span></td>
-                    <td>Global Textiles</td>
-                    <td>Surat → Delhi</td>
-                    <td>₹45,000</td>
-                    <td><span class="badge partial">Partial</span></td>
-                  </tr>
-
-                  <tr>
-                    <td><span class="link" data-id="BL-8801">BL-8801</span></td>
-                    <td>Reliance Retail</td>
-                    <td>Mumbai → Pune</td>
-                    <td>₹12,500</td>
-                    <td><span class="badge paid">Paid</span></td>
-                  </tr>
-
-                  <tr>
-                    <td><span class="link" data-id="BL-8799">BL-8799</span></td>
-                    <td>Amazon Logistics</td>
-                    <td>Bangalore → Chennai</td>
-                    <td>₹32,000</td>
-                    <td><span class="badge unpaid">Unpaid</span></td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- RIGHT -->
-        <div class="dashboard-right">
-
-          <!-- QUICK ACTION -->
-          <div class="card action-card">
-            <h3>Quick Management</h3>
-
-            <button><a href="../pages/builtyform.html">Create New Builty</a></button>
-            <button><a href="../pages/customer_form.html">Register Customer</a></button>
-            <button><a href="../pages/trip_form.html">Assign Trip</a></button>
-            <button>Record Payment</button>
-          </div>
-
-          <!-- FLEET -->
-          <div class="card fleet-card">
-            <h3>Active Fleet</h3>
-
-            <div class="fleet-item">
-              <strong>GJ-05-4412</strong>
-              <span>In Transit</span>
-            </div>
-
-            <div class="fleet-item">
-              <strong>MH-12-9011</strong>
-              <span class="danger">Delayed</span>
-            </div>
-
-            <div class="fleet-item">
-              <strong>KA-01-2234</strong>
-              <span>Maintenance</span>
+              <button onclick="location.href='../pages/builtyform.html'">Create New Builty</button>
+              <button onclick="location.href='../pages/customer_form.html'">Register Customer</button>
+              <button onclick="location.href='../pages/trip_form.html'">Assign Trip</button>
+              <button>Record Payment</button>
             </div>
 
           </div>

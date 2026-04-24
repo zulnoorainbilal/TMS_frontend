@@ -17,19 +17,24 @@ const customers = {
   }
 };
 
-// CLICK HANDLER
+/* CLICK HANDLER */
 document.addEventListener("click", function(e){
-  if(e.target.classList.contains("link")){
-    const id = e.target.dataset.id;
-    selectCustomer(id);
+  const row = e.target.closest("tr");
+
+  if (row) {
+    const link = row.querySelector(".link");
+    if (link) {
+      const id = link.dataset.id;
+      selectCustomer(id);
+    }
   }
 });
 
 function selectCustomer(id){
   const c = customers[id];
+  if(!c) return;
 
   document.getElementById("customerPanel").classList.remove("hidden");
-  document.querySelector(".customer-layout").classList.add("active");
 
   document.getElementById("cTitle").innerText = id + " Details";
   document.getElementById("cName").innerText = c.name;
@@ -42,5 +47,4 @@ function selectCustomer(id){
 
 function closeCustomer(){
   document.getElementById("customerPanel").classList.add("hidden");
-  document.querySelector(".customer-layout").classList.remove("active");
 }

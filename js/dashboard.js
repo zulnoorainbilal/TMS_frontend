@@ -10,21 +10,22 @@ const builtiy = {
     route: "Mumbai → Pune",
     freight: "12,500",
     status: "Paid"
+  },
+  "BL-8799": {
+    customer: "Amazon Logistics",
+    route: "Bangalore → Chennai",
+    freight: "32,000",
+    status: "Unpaid"
   }
 };
 
-document.addEventListener("click", function(e){
-  if(e.target.classList.contains("link")){
-    const id = e.target.dataset.id;
-    openDetail(id);
-  }
-});
-
 function openDetail(id){
   const b = builtiy[id];
+  if(!b) return;
 
-  document.getElementById("detailPanel").classList.remove("hidden");
-  document.querySelector(".dashboard-layout").classList.add("active");
+  const panel = document.getElementById("detailPanel");
+
+  panel.classList.remove("hidden");
 
   document.getElementById("detailTitle").innerText = id;
   document.getElementById("dCustomer").innerText = b.customer;
@@ -35,5 +36,4 @@ function openDetail(id){
 
 function closeDetail(){
   document.getElementById("detailPanel").classList.add("hidden");
-  document.querySelector(".dashboard-layout").classList.remove("active");
 }

@@ -17,19 +17,24 @@ const transactions = {
   }
 };
 
-// CLICK HANDLER
+/* FULL ROW CLICKABLE (better UX) */
 document.addEventListener("click", function(e){
-  if(e.target.classList.contains("link")){
-    const id = e.target.dataset.id;
-    selectTxn(id);
+  const row = e.target.closest("tr");
+
+  if (row) {
+    const link = row.querySelector(".link");
+    if (link) {
+      const id = link.dataset.id;
+      selectTxn(id);
+    }
   }
 });
 
 function selectTxn(id){
   const t = transactions[id];
+  if(!t) return;
 
   document.getElementById("txnPanel").classList.remove("hidden");
-  document.querySelector(".accounts-layout").classList.add("active");
 
   document.getElementById("txnTitle").innerText = id + " Details";
   document.getElementById("txnDate").innerText = t.date;
@@ -42,5 +47,4 @@ function selectTxn(id){
 
 function closeTxn(){
   document.getElementById("txnPanel").classList.add("hidden");
-  document.querySelector(".accounts-layout").classList.remove("active");
 }

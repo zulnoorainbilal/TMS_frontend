@@ -19,9 +19,9 @@ const expensesData = {
 
 function selectExpense(id) {
   const e = expensesData[id];
+  if (!e) return;
 
   document.getElementById("expensePanel").classList.remove("hidden");
-  document.querySelector(".expenses-layout").classList.add("active");
 
   document.getElementById("expTitle").innerText = id + " Details";
   document.getElementById("expDate").innerText = e.date;
@@ -34,5 +34,4 @@ function selectExpense(id) {
 
 function closeExpense() {
   document.getElementById("expensePanel").classList.add("hidden");
-  document.querySelector(".expenses-layout").classList.remove("active");
 }
