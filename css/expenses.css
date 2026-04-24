@@ -1,0 +1,78 @@
+/* LAYOUT */
+.expenses-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.expenses-layout.active {
+  grid-template-columns: 2fr 1fr;
+}
+
+/* LEFT */
+.expenses-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* TABLE */
+.table-section {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.table-wrapper {
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+thead {
+  background: #f9fafb;
+  position: sticky;
+  top: 0;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+}
+
+tr:hover {
+  background: #f5f7fa;
+}
+
+.link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* BADGES */
+.badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.paid { background: #d4edda; color: #155724; }
+.pending { background: #fff3cd; color: #856404; }
+.neutral { background: #eee; color: #555; }
+
+/* RIGHT PANEL */
+.expenses-right {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+}
+
+/* HIDDEN */
+.hidden {
+  display: none;
+}

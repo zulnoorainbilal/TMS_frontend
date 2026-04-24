@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Payments</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/payments.css">
+</head>
+
+<body onload="loadLayout()">
+
+  <div id="sidebar"></div>
+
+  <div class="main">
+    <div id="navbar"></div>
+
+    <div class="content">
+
+      <div class="payments-layout">
+
+        <!-- LEFT -->
+        <div class="payments-left">
+
+          <!-- HEADER -->
+          <div class="page-header">
+            <h2>Payments</h2>
+            <button class="primary-btn">+ Receive Payment</button>
+          </div>
+
+          <!-- CARDS -->
+          <div class="cards">
+            <div class="card"><p>Total Payments</p><h3>Rs. 2,450,000</h3></div>
+            <div class="card"><p>Advance</p><h3>Rs. 845,000</h3></div>
+            <div class="card"><p>Remaining</p><h3>Rs. 1,205,000</h3></div>
+            <div class="card"><p>Outstanding</p><h3>Rs. 320,400</h3></div>
+          </div>
+
+          <!-- FILTER -->
+          <div class="filter-bar">
+            <input type="text" placeholder="Search payment...">
+            <button class="filter-btn">Filter</button>
+          </div>
+
+          <!-- TABLE -->
+          <div class="table-section">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Customer</th>
+                    <th>Builty</th>
+                    <th>Type</th>
+                    <th>Method</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <tr onclick="selectPayment('PAY-001')">
+                    <td class="link">PAY-001</td>
+                    <td>24 May</td>
+                    <td>Global Logistics</td>
+                    <td>B-88291</td>
+                    <td><span class="badge neutral">Advance</span></td>
+                    <td>Bank</td>
+                    <td>45,000</td>
+                  </tr>
+
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+                  <tr onclick="selectPayment('PAY-002')">
+                    <td class="link">PAY-002</td>
+                    <td>24 May</td>
+                    <td>Swift Transporters</td>
+                    <td>B-88285</td>
+                    <td><span class="badge paid">Full</span></td>
+                    <td>Cash</td>
+                    <td>12,500</td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="payments-right hidden" id="paymentPanel">
+
+          <button class="close-btn" onclick="closePayment()">✖</button>
+
+          <h3 id="payTitle"></h3>
+
+          <p><strong>Date:</strong> <span id="payDate"></span></p>
+
+          <hr>
+
+          <h4>Customer</h4>
+          <p id="payCustomer"></p>
+
+          <h4>Builty</h4>
+          <p id="payBuilty"></p>
+
+          <hr>
+
+          <h4>Type</h4>
+          <p id="payType"></p>
+
+          <h4>Method</h4>
+          <p id="payMethod"></p>
+
+          <h4>Amount</h4>
+          <p id="payAmount"></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="../js/include.js"></script>
+  <script src="../js/payments.js"></script>
+
+</body>
+</html>

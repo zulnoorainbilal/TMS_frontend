@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add Customer</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/customer_form.css">
+</head>
+
+<body onload="loadLayout()">
+
+  <div id="sidebar"></div>
+
+  <div class="main">
+    <div id="navbar"></div>
+
+    <div class="content">
+
+      <div class="form-page">
+
+        <!-- HEADER -->
+        <div class="page-header">
+          <h2>Add Customer</h2>
+        </div>
+
+        <!-- FORM -->
+        <form class="form-container">
+
+          <!-- BASIC INFO -->
+          <div class="form-card">
+            <h3>Basic Information</h3>
+
+            <div class="form-grid">
+
+              <div>
+                <label>Customer Name *</label>
+                <input type="text" placeholder="e.g. ABC Logistics">
+              </div>
+
+              <div>
+                <label>Customer Type</label>
+                <select>
+                  <option>Regular</option>
+                  <option>Walk-in</option>
+                </select>
+              </div>
+
+              <div>
+                <label>Phone Number</label>
+                <input type="text" placeholder="+92 3xx xxxxxxx">
+              </div>
+
+              <div>
+                <label>GST Number</label>
+                <input type="text" placeholder="Optional">
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ADDITIONAL -->
+          <div class="form-card">
+            <h3>Additional Details</h3>
+
+            <div class="form-grid full">
+
+              <div>
+                <label>Address</label>
+                <input type="text" placeholder="Street, City, State">
+              </div>
+
+              <div>
+                <label>Internal Notes</label>
+                <textarea placeholder="Optional notes..."></textarea>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- STATUS -->
+          <div class="form-card">
+            <h3>Customer Status</h3>
+
+            <div class="status-toggle">
+              <button type="button" class="active">Active</button>
+              <button type="button">Inactive</button>
+            </div>
+          </div>
+
+          <!-- ACTIONS -->
+          <div class="form-actions">
+            <button type="reset" class="btn-light">Cancel</button>
+            <button type="button" class="btn-secondary">Save & Add Another</button>
+            <button type="submit" class="primary-btn">Save Customer</button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="../js/include.js"></script>
+  <script src="../js/customer_form.js"></script>
+</body>
+</html>

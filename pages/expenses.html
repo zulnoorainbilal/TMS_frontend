@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Expenses</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/expenses.css">
+</head>
+
+<body onload="loadLayout()">
+
+  <div id="sidebar"></div>
+
+  <div class="main">
+    <div id="navbar"></div>
+
+    <div class="content">
+
+      <div class="expenses-layout">
+
+        <!-- LEFT -->
+        <div class="expenses-left">
+
+          <!-- HEADER -->
+          <div class="page-header">
+            <h2>General Expenses</h2>
+            <button class="primary-btn">+ Add Expense</button>
+          </div>
+
+          <!-- CARDS -->
+          <div class="cards">
+            <div class="card"><p>Total Expenses</p><h3>Rs. 7,42,500</h3></div>
+            <div class="card"><p>Vehicle</p><h3>Rs. 2,84,300</h3></div>
+            <div class="card"><p>Office</p><h3>Rs. 94,200</h3></div>
+            <div class="card"><p>Salary</p><h3>Rs. 3,64,000</h3></div>
+          </div>
+
+          <!-- FILTER -->
+          <div class="filter-bar">
+            <input type="text" placeholder="Search expense...">
+            <button class="filter-btn">Filter</button>
+          </div>
+
+          <!-- TABLE -->
+          <div class="table-section">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Reference</th>
+                    <th>Amount</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                  <tr onclick="selectExpense('EXP-001')">
+                    <td class="link">EXP-001</td>
+                    <td>24 Oct</td>
+                    <td>Vehicle</td>
+                    <td>LP-9920</td>
+                    <td>45,200</td>
+                    <td><span class="badge neutral">Credit</span></td>
+                    <td><span class="badge pending">Pending</span></td>
+                  </tr>
+
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+                  <tr onclick="selectExpense('EXP-002')">
+                    <td class="link">EXP-002</td>
+                    <td>24 Oct</td>
+                    <td>Office</td>
+                    <td>BILL-221</td>
+                    <td>1,250</td>
+                    <td><span class="badge paid">Cash</span></td>
+                    <td><span class="badge paid">Paid</span></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="expenses-right hidden" id="expensePanel">
+
+          <button class="close-btn" onclick="closeExpense()">✖</button>
+
+          <h3 id="expTitle"></h3>
+
+          <p><strong>Date:</strong> <span id="expDate"></span></p>
+
+          <hr>
+
+          <h4>Category</h4>
+          <p id="expCategory"></p>
+
+          <h4>Reference</h4>
+          <p id="expRef"></p>
+
+          <hr>
+
+          <h4>Amount</h4>
+          <p id="expAmount"></p>
+
+          <h4>Payment</h4>
+          <p id="expPayment"></p>
+
+          <h4>Status</h4>
+          <p id="expStatus"></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="../js/include.js"></script>
+  <script src="../js/expenses.js"></script>
+
+</body>
+</html>
