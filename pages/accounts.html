@@ -27,7 +27,7 @@
           <!-- HEADER -->
           <div class="page-header">
             <h2>Financial Ledger</h2>
-            <button class="primary-btn">Export Data</button>
+            <button class="primary-btn" onclick="exportCSV()">Export Data</button>
           </div>
 
           <!-- STATS -->
@@ -40,14 +40,28 @@
 
           <!-- FILTER -->
           <div class="filter-bar">
-            <input type="text" placeholder="Search transaction...">
-            <button>Search</button>
+            <input type="text" id="searchInput" placeholder="Search transaction ID...">
+            <button onclick="searchTxn()">Search</button>
+          </div>
+
+          <!-- DATE FILTER -->
+          <div class="date-filter">
+            <button onclick="filterByDate('all')">All</button>
+            <button onclick="filterByDate('today')">Today</button>
+            <button onclick="filterByDate('week')">Weekly</button>
+            <button onclick="filterByDate('month')">Monthly</button>
           </div>
 
           <!-- TABLE -->
           <div class="table-section">
+
+            <!-- 🔥 HEADER -->
+            <div class="table-title">
+              <h3>Transaction History</h3>
+            </div>
+
             <div class="table-wrapper">
-              <table>
+              <table id="txnTable">
                 <thead>
                   <tr>
                     <th>Txn ID</th>
@@ -60,108 +74,9 @@
                   </tr>
                 </thead>
 
-                <tbody>
+                <tbody id="txnBody">
 
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
-                    <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
-                    <td>2024-05-20</td>
-                    <td>Payment</td>
-                    <td>Client</td>
-                    <td>INV-5502</td>
-                    <td class="credit">+₹45,000</td>
-                    <td>₹1,25,400</td>
-                  </tr>
-                  <tr>
+                  <tr data-date="2024-05-20">
                     <td><span class="link" data-id="TXN-8821">TXN-8821</span></td>
                     <td>2024-05-20</td>
                     <td>Payment</td>
@@ -171,11 +86,39 @@
                     <td>₹1,25,400</td>
                   </tr>
 
-                  <tr>
+                  <tr data-date="2024-05-18">
                     <td><span class="link" data-id="TXN-8822">TXN-8822</span></td>
-                    <td>2024-05-20</td>
+                    <td>2024-05-18</td>
                     <td>Expense</td>
-                    <td>Trip</td>
+                    <td>Trip Expense</td>
+                    <td>TRIP-990</td>
+                    <td class="debit">-₹12,000</td>
+                    <td>₹1,13,400</td>
+                  </tr>
+
+                  <tr data-date="2024-05-18">
+                    <td><span class="link" data-id="TXN-8822">TXN-8822</span></td>
+                    <td>2024-05-18</td>
+                    <td>Expense</td>
+                    <td>Trip Expense</td>
+                    <td>TRIP-990</td>
+                    <td class="debit">-₹12,000</td>
+                    <td>₹1,13,400</td>
+                  </tr>
+                  <tr data-date="2024-05-18">
+                    <td><span class="link" data-id="TXN-8822">TXN-8822</span></td>
+                    <td>2024-05-18</td>
+                    <td>Expense</td>
+                    <td>Trip Expense</td>
+                    <td>TRIP-990</td>
+                    <td class="debit">-₹12,000</td>
+                    <td>₹1,13,400</td>
+                  </tr>
+                  <tr data-date="2024-05-18">
+                    <td><span class="link" data-id="TXN-8822">TXN-8822</span></td>
+                    <td>2024-05-18</td>
+                    <td>Expense</td>
+                    <td>Trip Expense</td>
                     <td>TRIP-990</td>
                     <td class="debit">-₹12,000</td>
                     <td>₹1,13,400</td>
@@ -185,6 +128,7 @@
 
               </table>
             </div>
+
           </div>
 
         </div>

@@ -18,6 +18,15 @@
   align-items: center;
 }
 
+.primary-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* CARDS */
 .cards.full-width {
   display: grid;
@@ -94,6 +103,12 @@ tbody tr {
 
 tbody tr:hover {
   background: #f5f7fa;
+}
+
+.link {
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 /* STATUS BADGES */
