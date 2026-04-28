@@ -38,22 +38,37 @@
             <div class="card"><p>Profit</p><h3>₹1,25,400</h3></div>
           </div>
 
-          <!-- FILTER -->
-          <div class="filter-bar">
-            <input type="text" id="searchInput" placeholder="Search transaction ID...">
-            <button onclick="searchTxn()">Search</button>
-          </div>
-
-          <!-- DATE FILTER -->
-          <div class="date-filter">
-            <button onclick="filterByDate('all')">All</button>
-            <button onclick="filterByDate('today')">Today</button>
-            <button onclick="filterByDate('week')">Weekly</button>
-            <button onclick="filterByDate('month')">Monthly</button>
-          </div>
-
           <!-- TABLE -->
           <div class="table-section">
+
+            <form method="GET" class="global-filter">
+
+              <!-- SEARCH -->
+              <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" name="q" placeholder="Search ID, customer..." value="{{ request.GET.q }}">
+              </div>
+
+              <!-- FILTER SELECT -->
+              <select name="filter" id="filterSelect" onchange="handleFilterChange()">
+                <option value="">All</option>
+                <option value="today" selected>Today</option>
+                <option value="yesterday">Yesterday</option>
+                <option value="week">This Week</option>
+                <option value="month">This Month</option>
+                <option value="range">Date Range</option>
+              </select>
+
+              <!-- DATE RANGE -->
+              <div id="dateRangeBox" class="hidden">
+                <input type="date" name="start_date" id="startDate">
+                <input type="date" name="end_date" id="endDate">
+              </div>
+
+              <!-- SUBMIT -->
+              <button type="submit" class="filter-btn">Search</button>
+
+            </form>
 
             <!-- 🔥 HEADER -->
             <div class="table-title">

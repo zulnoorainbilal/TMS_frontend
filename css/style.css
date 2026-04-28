@@ -136,16 +136,9 @@ body {
 
 /* Footer */
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 240px;
-  right: 0;
-  height: 60px;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  text-align: center;
+  padding: 20px 0px;
+  }
 
 /* Layout */
 .main {
@@ -154,7 +147,6 @@ body {
 
 .content {
   margin-top: 60px;
-  margin-bottom: 60px;
   padding: 20px;
 }
 
@@ -192,3 +184,58 @@ table td {
   border-bottom: 1px solid #eee;
 }
 
+
+/* Filter CSS */
+
+.global-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+/* SEARCH */
+.search-box {
+  position: relative;
+  width: 400px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 10px 8px 30px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.search-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+}
+
+/* SELECT */
+.global-filter select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* DATE */
+.global-filter input[type="date"] {
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* BUTTON */
+.filter-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
