@@ -4,18 +4,20 @@ const transactions = {
     type: "Payment",
     source: "Client",
     ref: "INV-5502",
-    amount: "+45,000",
-    balance: "1,25,400"
+    amount: "+₹45,000",
+    balance: "₹1,25,400"
   },
   "TXN-8822": {
     date: "2024-05-18",
     type: "Expense",
     source: "Trip Expense",
     ref: "TRIP-990",
-    amount: "-12,000",
-    balance: "1,13,400"
+    amount: "-₹12,000",
+    balance: "₹1,13,400"
   }
 };
+
+let currentTxnId = null;
 
 /* ROW CLICK */
 document.addEventListener("click", function(e){
@@ -33,6 +35,8 @@ function selectTxn(id){
   const t = transactions[id];
   if(!t) return;
 
+  currentTxnId = id;
+
   document.getElementById("txnPanel").classList.remove("hidden");
 
   document.getElementById("txnTitle").innerText = id + " Details";
@@ -48,6 +52,55 @@ function closeTxn(){
   document.getElementById("txnPanel").classList.add("hidden");
 }
 
+/* EDIT MODAL */
+function openEditModal(){
+  const t = transactions[currentTxnId];
+
+  document.getElementById("editModal").classList.remove("hidden");
+
+  document.getElementById("editDate").value = t.date;
+  document.getElementById("editType").value = t.type;
+  document.getElementById("editSource").value = t.source;
+  document.getElementById("editRef").value = t.ref;
+  document.getElementById("editAmount").value = t.amount;
+  document.getElementById("editBalance").value = t.balance;
+}
+
+function closeEditModal(){
+  document.getElementById("editModal").classList.add("hidden");
+}
+
+function saveEdit(){
+
+  const t = transactions[currentTxnId];
+
+  t.date = document.getElementById("editDate").value;
+  t.type = document.getElementById("editType").value;
+  t.source = document.getElementById("editSource").value;
+  t.ref = document.getElementById("editRef").value;
+  t.amount = document.getElementById("editAmount").value;
+  t.balance = document.getElementById("editBalance").value;
+
+  selectTxn(currentTxnId);
+
+  const rows = document.querySelectorAll("#txnBody tr");
+
+  rows.forEach(row => {
+    const id = row.querySelector(".link").dataset.id;
+
+    if(id === currentTxnId){
+      row.cells[1].innerText = t.date;
+      row.cells[2].innerText = t.type;
+      row.cells[3].innerText = t.source;
+      row.cells[4].innerText = t.ref;
+      row.cells[5].innerText = t.amount;
+      row.cells[6].innerText = t.balance;
+    }
+  });
+
+  closeEditModal();
+}
+
 /* SEARCH */
 function searchTxn(){
   const input = document.getElementById("searchInput").value.toUpperCase();
@@ -56,36 +109,6 @@ function searchTxn(){
   rows.forEach(row => {
     const id = row.querySelector(".link").innerText;
     row.style.display = id.includes(input) ? "" : "none";
-  });
-}
-
-/* DATE FILTER */
-function filterByDate(type){
-  const rows = document.querySelectorAll("#txnBody tr");
-  const today = new Date();
-
-  rows.forEach(row => {
-    const rowDate = new Date(row.dataset.date);
-    let show = true;
-
-    if(type === "today"){
-      show = rowDate.toDateString() === today.toDateString();
-    }
-
-    if(type === "week"){
-      const diff = (today - rowDate) / (1000 * 60 * 60 * 24);
-      show = diff <= 7;
-    }
-
-    if(type === "month"){
-      show = rowDate.getMonth() === today.getMonth();
-    }
-
-    if(type === "all"){
-      show = true;
-    }
-
-    row.style.display = show ? "" : "none";
   });
 }
 

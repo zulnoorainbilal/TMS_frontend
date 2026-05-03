@@ -26,15 +26,27 @@
           <!-- HEADER -->
           <div class="page-header">
             <h2>Payments</h2>
-            <button class="primary-btn">+ Receive Payment</button>
+            <button class="primary-btn" onclick="openReceiptModal()">+ Receive Payment</button>
           </div>
 
           <!-- CARDS -->
           <div class="cards">
-            <div class="card"><p>Total Payments</p><h3>Rs. 2,450,000</h3></div>
-            <div class="card"><p>Advance</p><h3>Rs. 845,000</h3></div>
-            <div class="card"><p>Remaining</p><h3>Rs. 1,205,000</h3></div>
-            <div class="card"><p>Outstanding</p><h3>Rs. 320,400</h3></div>
+            <div class="card">
+              <p>Total Payments</p>
+              <h3>Rs. 2,450,000</h3>
+            </div>
+            <div class="card">
+              <p>Advance</p>
+              <h3>Rs. 845,000</h3>
+            </div>
+            <div class="card">
+              <p>Remaining</p>
+              <h3>Rs. 1,205,000</h3>
+            </div>
+            <div class="card">
+              <p>Outstanding</p>
+              <h3>Rs. 320,400</h3>
+            </div>
           </div>
 
           <!-- TABLE -->
@@ -189,6 +201,7 @@
 
                 </tbody>
               </table>
+              <div class="pagination" id="pagination"></div>
             </div>
           </div>
 
@@ -229,10 +242,110 @@
     </div>
 
     <div id="footer"></div>
+  </div> 
+
+  
+  <!-- PAYMENT RECEIPT PANEL -->
+  <div class="receipt-overlay hidden" id="receiptModal">
+
+    <div class="receipt-container">
+
+      <!-- HEADER -->
+      <div class="receipt-header">
+        <h2>New Payment Receipt</h2>
+        <button class="close-btn" onclick="closeReceiptModal()">✖</button>
+      </div>
+
+      <div class="receipt-body">
+
+        <!-- LEFT SIDE -->
+        <div class="receipt-left">
+
+          <!-- CUSTOMER SECTION -->
+          <div class="card form-card">
+            <h3>Customer & Builty Selection</h3>
+
+            <div class="form-row">
+              <div>
+                <label>Customer</label>
+                <input type="text" placeholder="Select customer">
+              </div>
+
+              <div>
+                <label>Builty No</label>
+                <input type="text" placeholder="Select builty">
+              </div>
+            </div>
+
+            <div class="summary-box">
+              <div>Total Freight <strong>₹12,500</strong></div>
+              <div>Advance Paid <strong>₹5,000</strong></div>
+              <div class="highlight">Outstanding <strong>₹7,500</strong></div>
+            </div>
+          </div>
+
+          <!-- PAYMENT DETAILS -->
+          <div class="card form-card">
+            <h3>Payment Details</h3>
+
+            <div class="form-row">
+              <div>
+                <label>Amount</label>
+                <input type="number" placeholder="Enter amount">
+              </div>
+
+              <div>
+                <label>Date</label>
+                <input type="date">
+              </div>
+            </div>
+
+            <div class="btn-group">
+              <button class="tag active">Remaining</button>
+              <button class="tag">Advance</button>
+              <button class="tag">Full</button>
+            </div>
+
+            <div class="btn-group">
+              <button class="tag active">Cash</button>
+              <button class="tag">Bank</button>
+              <button class="tag">Cheque</button>
+            </div>
+          </div>
+
+          <!-- NOTES -->
+          <div class="card form-card">
+            <h3>Additional Notes</h3>
+            <textarea placeholder="Enter notes..."></textarea>
+          </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="receipt-right">
+
+          <div class="card summary-card">
+            <h4>Financial Summary</h4>
+            <p>Current Balance <strong>₹7,500</strong></p>
+            <p>Paying Now <strong class="blue">₹4,500</strong></p>
+            <hr>
+            <h2>₹3,000</h2>
+          </div>
+
+          <button class="primary-btn full-btn">Save Payment</button>
+          <button class="secondary-btn full-btn">Save & Add Another</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
   <script src="../js/include.js"></script>
   <script src="../js/payments.js"></script>
 
 </body>
+
 </html>

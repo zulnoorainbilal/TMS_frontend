@@ -31,10 +31,22 @@
 
           <!-- CARDS -->
           <div class="cards">
-            <div class="card"><p>Total Expenses</p><h3>Rs. 7,42,500</h3></div>
-            <div class="card"><p>Vehicle</p><h3>Rs. 2,84,300</h3></div>
-            <div class="card"><p>Office</p><h3>Rs. 94,200</h3></div>
-            <div class="card"><p>Salary</p><h3>Rs. 3,64,000</h3></div>
+            <div class="card">
+              <p>Total Expenses</p>
+              <h3>Rs. 7,42,500</h3>
+            </div>
+            <div class="card">
+              <p>Vehicle</p>
+              <h3>Rs. 2,84,300</h3>
+            </div>
+            <div class="card">
+              <p>Office</p>
+              <h3>Rs. 94,200</h3>
+            </div>
+            <div class="card">
+              <p>Salary</p>
+              <h3>Rs. 3,64,000</h3>
+            </div>
           </div>
 
           <!-- TABLE -->
@@ -188,6 +200,7 @@
 
                 </tbody>
               </table>
+              <div class="pagination" id="pagination"></div>
             </div>
           </div>
 
@@ -221,7 +234,54 @@
           <h4>Status</h4>
           <p id="expStatus"></p>
 
+
+          <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+
         </div>
+
+      </div>
+
+    </div>
+    <!-- EDIT EXPENSE MODAL -->
+    <div id="editModal" class="modal-overlay hidden">
+
+      <div class="modal-box">
+
+        <button class="close-btn" onclick="closeEditModal()">✖</button>
+
+        <h3>Edit Expense</h3>
+
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" id="editDate">
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+          <input type="text" id="editCategory">
+        </div>
+
+        <div class="form-group">
+          <label>Reference</label>
+          <input type="text" id="editRef">
+        </div>
+
+        <div class="form-group">
+          <label>Amount</label>
+          <input type="text" id="editAmount">
+        </div>
+
+        <div class="form-group">
+          <label>Payment</label>
+          <input type="text" id="editPayment">
+        </div>
+
+        <div class="form-group">
+          <label>Status</label>
+          <input type="text" id="editStatus">
+        </div>
+
+        <button class="save-btn" onclick="saveEdit()">Save Changes</button>
 
       </div>
 
@@ -234,4 +294,5 @@
   <script src="../js/expenses.js"></script>
 
 </body>
+
 </html>

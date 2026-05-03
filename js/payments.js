@@ -17,19 +17,29 @@ const paymentsData = {
   }
 };
 
-/* FULL ROW CLICKABLE */
+/* =========================
+   ROW CLICK → DETAIL PANEL
+========================= */
 document.addEventListener("click", function(e){
+
   const row = e.target.closest("tr");
 
-  if (row) {
-    const link = row.querySelector(".link");
-    if (link) {
-      const id = link.innerText.trim();
-      selectPayment(id);
-    }
+  // Prevent conflict with modal button clicks
+  if (!row || e.target.closest(".primary-btn")) return;
+
+  const link = row.querySelector(".link");
+
+  if (link) {
+    const id = link.innerText.trim();
+    selectPayment(id);
   }
+
 });
 
+
+/* =========================
+   OPEN DETAIL PANEL
+========================= */
 function selectPayment(id) {
   const p = paymentsData[id];
   if (!p) return;
@@ -45,6 +55,22 @@ function selectPayment(id) {
   document.getElementById("payAmount").innerText = p.amount;
 }
 
+
+/* =========================
+   CLOSE DETAIL PANEL
+========================= */
 function closePayment() {
   document.getElementById("paymentPanel").classList.add("hidden");
+}
+
+
+/* =========================
+   RECEIPT MODAL CONTROL
+========================= */
+function openReceiptModal() {
+  document.getElementById("receiptModal").classList.remove("hidden");
+}
+
+function closeReceiptModal() {
+  document.getElementById("receiptModal").classList.add("hidden");
 }

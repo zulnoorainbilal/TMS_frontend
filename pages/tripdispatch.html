@@ -122,100 +122,10 @@
                     <td>XYZ-456</td>
                     <td><span class="badge pending">Pending</span></td>
                   </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
-                  <tr onclick="selectTrip('TRP-002')">
-                    <td class="link">TRP-002</td>
-                    <td>B-77211<br><small>Nexus Logistics</small></td>
-                    <td>Islamabad → Multan</td>
-                    <td>XYZ-456</td>
-                    <td><span class="badge pending">Pending</span></td>
-                  </tr>
                 </tbody>
 
               </table>
+              <div class="pagination" id="pagination"></div>
             </div>
           </div>
 
@@ -248,10 +158,110 @@
           <p>Expenses: <span id="expenses"></span></p>
           <p><strong>Profit: <span id="profit"></span></strong></p>
 
+
+          <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+          <button class="secondary-btn" onclick="openExpenseModal()">Manage Expenses</button>
+
         </div>
 
       </div>
 
+    </div>
+
+    <!-- EDIT TRIP MODAL -->
+    <div id="editModal" class="modal-overlay hidden">
+
+      <div class="modal-box">
+
+        <button class="close-btn" onclick="closeEditModal()">✖</button>
+
+        <h3>Edit Trip</h3>
+
+        <div class="form-group">
+          <label>Driver</label>
+          <input type="text" id="editDriver">
+        </div>
+
+        <div class="form-group">
+          <label>Vehicle</label>
+          <input type="text" id="editVehicle">
+        </div>
+
+        <div class="form-group">
+          <label>Route</label>
+          <input type="text" id="editRoute">
+        </div>
+
+        <div class="form-group">
+          <label>Status</label>
+          <input type="text" id="editStatus">
+        </div>
+
+        <div class="form-group">
+          <label>Freight</label>
+          <input type="number" id="editFreight">
+        </div>
+
+        <div class="form-group">
+          <label>Expenses</label>
+          <input type="number" id="editExpenses">
+        </div>
+
+        <button class="save-btn" onclick="saveEdit()">Save Changes</button>
+
+      </div>
+
+    </div>
+    <!-- EXPENSE MODAL -->
+    <div id="expenseModal" class="modal-overlay hidden">
+
+      <div class="modal-large">
+
+        <button class="close-btn" onclick="closeExpenseModal()">✖</button>
+
+        <h3>Manage Trip Expenses</h3>
+        <p style="color:#777; font-size:13px;">Track all trip expenses</p>
+
+        <!-- ADD EXPENSE -->
+        <div class="expense-form">
+
+          <select id="expType">
+            <option>Fuel</option>
+            <option>Food</option>
+            <option>Toll</option>
+            <option>Repair</option>
+          </select>
+
+          <input type="number" id="expAmount" placeholder="Amount">
+
+          <input type="date" id="expDate">
+
+          <button class="add-expense-btn" onclick="addExpense()">Add</button>
+        </div>
+
+        <input type="text" id="expNote" placeholder="Notes (optional)"
+          style="width:100%; padding:10px; border-radius:8px; border:1px solid #ddd; margin-bottom:10px;">
+
+        <!-- HISTORY -->
+        <table class="expense-table">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Note</th>
+            </tr>
+          </thead>
+
+          <tbody id="expenseList"></tbody>
+        </table>
+
+        <div class="modal-footer">
+          <button onclick="closeExpenseModal()">Cancel</button>
+          <button class="primary-btn">Save & Close</button>
+        </div>
+
+      </div>
     </div>
 
     <div id="footer"></div>

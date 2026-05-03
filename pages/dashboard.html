@@ -34,10 +34,22 @@
 
           <!-- CARDS -->
           <div class="cards full-width">
-            <div class="card"><p>Total Builty</p><h3>42</h3></div>
-            <div class="card"><p>Total Trips</p><h3>18</h3></div>
-            <div class="card"><p>Income</p><h3>₹1.24L</h3></div>
-            <div class="card"><p>Pending</p><h3>₹3.12L</h3></div>
+            <div class="card">
+              <p>Total Builty</p>
+              <h3>42</h3>
+            </div>
+            <div class="card">
+              <p>Total Trips</p>
+              <h3>18</h3>
+            </div>
+            <div class="card">
+              <p>Income</p>
+              <h3>₹1.24L</h3>
+            </div>
+            <div class="card">
+              <p>Pending</p>
+              <h3>₹3.12L</h3>
+            </div>
           </div>
 
           <!-- TABLE + RIGHT SIDE -->
@@ -160,6 +172,7 @@
 
                   </tbody>
                 </table>
+                <div class="pagination" id="pagination"></div>
               </div>
             </div>
 
@@ -170,7 +183,7 @@
               <button onclick="location.href='../pages/builtyform.html'">Create New Builty</button>
               <button onclick="location.href='../pages/customer_form.html'">Register Customer</button>
               <button onclick="location.href='../pages/trip_form.html'">Assign Trip</button>
-              <button>Record Payment</button>
+              <button onclick="location.href='../pages/payments.html'">Record Payment</button>
             </div>
 
           </div>
@@ -192,7 +205,45 @@
           <p><strong>Freight:</strong> <span id="dFreight"></span></p>
           <p><strong>Status:</strong> <span id="dStatus"></span></p>
 
+
+          <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
+
         </div>
+
+      </div>
+
+    </div>
+
+    <!-- EDIT MODAL -->
+    <div id="editModal" class="modal-overlay hidden">
+
+      <div class="modal-box">
+
+        <button class="close-btn" onclick="closeEditModal()">✖</button>
+
+        <h3>Edit Record</h3>
+
+        <div class="form-group">
+          <label>Customer</label>
+          <input type="text" id="editCustomer">
+        </div>
+
+        <div class="form-group">
+          <label>Route</label>
+          <input type="text" id="editRoute">
+        </div>
+
+        <div class="form-group">
+          <label>Freight</label>
+          <input type="text" id="editFreight">
+        </div>
+
+        <div class="form-group">
+          <label>Status</label>
+          <input type="text" id="editStatus">
+        </div>
+
+        <button class="save-btn" onclick="saveEdit()">Save Changes</button>
 
       </div>
 
@@ -206,4 +257,5 @@
   <script src="../js/dashboard.js"></script>
 
 </body>
+
 </html>

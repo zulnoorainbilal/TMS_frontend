@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Customers</title>
@@ -30,10 +31,22 @@
 
           <!-- CARDS -->
           <div class="cards">
-            <div class="card"><p>Total</p><h3>1,248</h3></div>
-            <div class="card"><p>Regular</p><h3>142</h3></div>
-            <div class="card"><p>Walk-in</p><h3>1,106</h3></div>
-            <div class="card"><p>Pending Dues</p><h3>Rs. 425,800</h3></div>
+            <div class="card">
+              <p>Total</p>
+              <h3>1,248</h3>
+            </div>
+            <div class="card">
+              <p>Regular</p>
+              <h3>142</h3>
+            </div>
+            <div class="card">
+              <p>Walk-in</p>
+              <h3>1,106</h3>
+            </div>
+            <div class="card">
+              <p>Pending Dues</p>
+              <h3>Rs. 425,800</h3>
+            </div>
           </div>
 
           <!-- FILTER -->
@@ -208,6 +221,7 @@
 
                 </tbody>
               </table>
+              <div class="pagination" id="pagination"></div>
             </div>
           </div>
 
@@ -232,8 +246,54 @@
           <hr>
 
           <p><strong>Status:</strong> <span id="cStatus"></span></p>
+          <button class="edit-btn" onclick="openEditModal()">Edit Data</button>
 
         </div>
+
+      </div>
+
+    </div>
+
+    <!-- EDIT CUSTOMER MODAL -->
+    <div id="editModal" class="modal-overlay hidden">
+
+      <div class="modal-box">
+
+        <button class="close-btn" onclick="closeEditModal()">✖</button>
+
+        <h3>Edit Customer</h3>
+
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="editName">
+        </div>
+
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" id="editPhone">
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+          <input type="text" id="editCategory">
+        </div>
+
+        <div class="form-group">
+          <label>Builty</label>
+          <input type="number" id="editBuilty">
+        </div>
+
+        <div class="form-group">
+          <label>Balance</label>
+          <input type="text" id="editBalance">
+        </div>
+
+        <div class="form-group">
+          <label>Status</label>
+          <input type="text" id="editStatus">
+        </div>
+
+        <button class="save-btn" onclick="saveEdit()">Save Changes</button>
 
       </div>
 
@@ -246,4 +306,5 @@
   <script src="../js/customers.js"></script>
 
 </body>
+
 </html>

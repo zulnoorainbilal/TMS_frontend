@@ -178,7 +178,7 @@ tbody tr:hover {
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
   z-index: 2000;
 
-  height: calc(50vh - 60px);
+  height: calc(70vh - 80px);
   overflow-y: auto;
 
   animation: slideInRight 0.25s ease;
